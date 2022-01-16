@@ -4,6 +4,11 @@ export const Row = styled.div`
 display : flex;
 flex-direction:row;
 align-items:center;
+::-webkit-scrollbar {
+    display: none;
+  }
+  ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 `
 
 export const Col = styled.div`
