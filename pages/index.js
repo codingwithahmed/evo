@@ -3,6 +3,17 @@
 
   const data = [1,2,3,4,5,6,1,2]
 
+  const EditInput = ({title}) => {
+    return <Col>
+      <h1>{title}</h1>
+      <CustomInput >
+         <div style={{border:"2px solid black"}}>
+              <input />  
+         </div>
+      </CustomInput>
+    </Col>
+  }
+
   const MainInput = ({title}) => {
     return (
       <Row style={{alignItems:"center",justifyContent:"space-between",width:"100%"}}>
@@ -130,7 +141,7 @@
                 }
                 <hr style={{width:"100%"}}/>
                 <ButtonWhite>
-               <h1>Paga Al Recibir</h1> 
+               <h1 style={{"fontSize":"1.5em"}}>Paga Al Recibir</h1> 
                 </ButtonWhite>
               </Col>
             </Row>
@@ -138,7 +149,33 @@
         </Container>
         
         <ContainerSide>
+        <Col style={{
+          height:"100%"
+        }}>
+          
+          <div style={{padding:"2.5% 5%",flex:1,boxShadow:"0 2px 5px 1px #171650",zIndex:2}}>
+            <Col  style={{
+          height:"100%",
+          justifyContent:"center"
+        }}>
+          <Row style={{justifyContent:"space-between"}}>
+          <Heading>Edit: Pago
+CONTRAENTREGA + Envío
+GRATISEdit</Heading>
 
+          </Row>
+            </Col>
+          </div>
+
+         <div style={{padding:"2.5% 5%",flex:6,backgroundColor:"#f7f1f1"}}>
+           <h1 style={{fontSize:"1.2em",textAlign:"center"}}>Basic</h1>
+           <hr style={{width:"100%"}} />
+           <Col >
+              {[1,2,3,4,5].map(e => <EditInput title={"Title"}/>)}
+           </Col>
+         </div>
+          
+          </Col>
         </ContainerSide>
       </Row>
   );
